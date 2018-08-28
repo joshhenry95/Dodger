@@ -33,6 +33,8 @@ public class Collide : MonoBehaviour {
 
             Lives.text = "Lives: " + lives.ToString();
 
+            /* The EditorUtility.DisplayDialog is only usable in the editor.
+               Therefore, with this dialog, the game can't be built. */
             if (lives == -1)
             {
                 bool retry = EditorUtility.DisplayDialog("Game Over", "You have run out of lives! You have a highscore of " + 
